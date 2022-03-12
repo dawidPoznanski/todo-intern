@@ -1,10 +1,11 @@
-import { useState, useReducer } from 'react';
+import { useState, useReducer, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './NoteForm.module.css';
 
 function NoteForm() {
   const initialNotesState = {
-    notes: [],
+    notes: JSON.parse(localStorage.getItem('notes')) || [],
   };
   // DATE
   function padTo2Digits(num) {
@@ -46,6 +47,10 @@ function NoteForm() {
 
   const [noteInput, setNoteInput] = useState('');
   const [notesState, dispatch] = useReducer(notesReducer, initialNotesState);
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notesState.notes));
+    console.log('zapisano');
+  });
 
   const addNote = (event) => {
     event.preventDefault();
@@ -86,7 +91,9 @@ function NoteForm() {
               Delete note
             </button>
           </div>
-          <p className={styles.noteDate}>{note.date}</p>
+          <Link to={'/' + note.id} className={styles.noteDate}>
+            <p>{note.date}</p>
+          </Link>
         </div>
       ))}
     </div>
