@@ -1,0 +1,104 @@
+.notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  padding: 20px;
+}
+.notesForm {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  width: 70%;
+  margin: 0;
+  padding: 5px;
+  color: #707070;
+}
+
+.text {
+  margin: 0;
+  width: 70%;
+  min-height: 150px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  outline: none;
+  overflow-y: scroll;
+}
+.text::placeholder {
+  font-size: 1.2rem;
+  font-weight: 300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 5px;
+}
+
+.btnSubmit {
+  margin: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #707070;
+}
+
+/*NOTES CARD STYLE*/
+.card {
+  height: 10rem;
+  width: 70%;
+  background-color: brown;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 0 0 20px 0;
+}
+
+.noteText {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 10px;
+  grid-area: 1 / 1 / 4 / 10;
+  display: inline;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  word-wrap: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.noteDate {
+  padding: 0 10px;
+  grid-area: 4 / 1 / 6 / 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.btnPos {
+  align-items: center;
+  display: flex;
+  grid-area: 1 / 10 / 6 / 13;
+  justify-content: center;
+  flex-direction: column;
+}
+.btnDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
