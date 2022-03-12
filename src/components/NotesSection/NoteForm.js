@@ -4,7 +4,6 @@ import styles from './NoteForm.module.css';
 
 function NoteForm() {
   const initialNotesState = {
-    lastNoteCreated: null,
     notes: [],
   };
   // DATE
@@ -25,8 +24,7 @@ function NoteForm() {
     switch (action.type) {
       case 'ADD_NOTE': {
         const newState = {
-          lastNoteCreated: formatDate(new Date()),
-          notes: [...prevState.notes, action.payload],
+          notes: [action.payload, ...prevState.notes],
         };
         console.log(newState, 'adding note');
         return newState;
@@ -57,10 +55,13 @@ function NoteForm() {
     const newNote = {
       id: uuidv4(),
       text: noteInput,
+      date: formatDate(new Date()),
     };
+
     dispatch({ type: 'ADD_NOTE', payload: newNote });
     setNoteInput('');
   };
+
   return (
     <div className={styles.notes}>
       <form onSubmit={addNote} className={styles.notesForm}>
@@ -73,7 +74,7 @@ function NoteForm() {
         ></textarea>
         <button className={styles.btnSubmit}>Add note</button>
       </form>
-
+      <h1> Last notes</h1>
       {notesState.notes.map((note) => (
         <div className={styles.card} key={note.id}>
           <p className={styles.noteText}>{note.text}</p>
@@ -85,7 +86,7 @@ function NoteForm() {
               Delete note
             </button>
           </div>
-          <p className={styles.noteDate}>{notesState.lastNoteCreated}</p>
+          <p className={styles.noteDate}>{note.date}</p>
         </div>
       ))}
     </div>

@@ -32,7 +32,10 @@
   border: 1px solid #dddddd;
   border-radius: 5px;
   outline: none;
-  overflow-y: scroll;
+  resize: none;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 10px 5px;
 }
 .text::placeholder {
   font-size: 1.2rem;
@@ -59,7 +62,7 @@
 .card {
   height: 10rem;
   width: 70%;
-  background-color: brown;
+  background-color: #eaeaea;
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -73,6 +76,7 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 1rem;
+  color: #868686;
   padding: 10px;
   grid-area: 1 / 1 / 4 / 10;
   display: inline;
@@ -85,6 +89,7 @@
 }
 .noteDate {
   padding: 0 10px;
+  color: #868686;
   grid-area: 4 / 1 / 6 / 10;
   display: flex;
   flex-direction: column;
@@ -101,4 +106,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #eb5858;
+  color: #fff;
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid #eb5858;
+  border-radius: 5px;
 }
