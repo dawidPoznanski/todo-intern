@@ -1,5 +1,7 @@
+import Navbar from './components/Nav/Navbar.js';
+
 function App() {
-  return <div className='App'></div>;
+  return <Navbar />;
 }
 
 export default App;
