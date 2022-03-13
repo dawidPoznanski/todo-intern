@@ -79,7 +79,7 @@ function NoteForm() {
         ></textarea>
         <button className={styles.btnSubmit}>Add note</button>
       </form>
-      <h1> Last notes</h1>
+      <h1 className={styles.subtitle}> Last notes</h1>
       {notesState.notes.map((note) => (
         <div className={styles.card} key={note.id}>
           <p className={styles.noteText}>{note.text}</p>
@@ -90,6 +90,7 @@ function NoteForm() {
             >
               Delete note
             </button>
+            {/* <DeleteButton noteToDelete={note} /> */}
           </div>
           <Link to={'/' + note.id} className={styles.noteDate}>
             <p>{note.date}</p>

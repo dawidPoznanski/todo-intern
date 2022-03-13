@@ -25,6 +25,14 @@
   color: #707070;
 }
 
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #707070;
+  padding: 20px;
+}
+
 .text {
   margin: 0;
   width: 70%;
@@ -56,6 +64,7 @@
   border-radius: 5px;
   background-color: #fff;
   color: #707070;
+  cursor: pointer;
 }
 
 /*NOTES CARD STYLE*/
@@ -94,7 +103,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  text-decoration: none;
 }
+
 .btnPos {
   align-items: center;
   display: flex;
@@ -112,4 +123,5 @@
   outline: none;
   border: 1px solid #eb5858;
   border-radius: 5px;
+  cursor: pointer;
 }

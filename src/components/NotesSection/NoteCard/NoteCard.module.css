@@ -1,0 +1,67 @@
+.cardNote {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.btnDiv {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.btnDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb5858;
+  color: #fff;
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid #eb5858;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  color: #868686;
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+}
+
+.cardText {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #868686;
+  width: 70%;
+  background-color: #eaeaea;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 0 20px;
+  word-wrap: break-word;
+  align-items: flex-start;
+}
+
+.noteDate {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: end;
+}
